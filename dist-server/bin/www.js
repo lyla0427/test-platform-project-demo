@@ -15,7 +15,9 @@ var _debug = _interopRequireDefault(require("debug"));
 
 var _http = _interopRequireDefault(require("http"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 var debug = (0, _debug["default"])("your-project-name:server");
 /**
@@ -29,12 +31,10 @@ _app["default"].set("port", port);
  * Create HTTP server.
  */
 
-
 var server = _http["default"].createServer(_app["default"]);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
 
 server.listen(port);
 server.on("error", onError);
@@ -62,7 +62,6 @@ function normalizePort(val) {
  * Event listener for HTTP server "error" event.
  */
 
-
 function onError(error) {
   if (error.syscall !== "listen") {
     throw error;
@@ -88,7 +87,6 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-
 
 function onListening() {
   var addr = server.address();

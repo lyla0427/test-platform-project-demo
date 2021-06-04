@@ -1,0 +1,33 @@
+{
+  "info": {
+    "_postman_id": "2024079e-622f-4a62-aed9-29f6f0c31742",
+    "name": "test-platform-project-demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "root api",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status test\", () => {pm.response.to.have.status(200)})"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:3000",
+          "host": ["localhost"],
+          "port": "3000"
+        }
+      },
+      "response": []
+    }
+  ]
+}
